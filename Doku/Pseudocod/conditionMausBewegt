@@ -1,0 +1,28 @@
+namespace testproject {
+ 
+//     class GenericSequence : public eeros::sequencer::Sequence< void, std::string > {
+    class GenericSequence : public eeros::sequencer::Sequence< void > {
+ 
+		public:
+		GenericSequence(eeros::sequencer::Sequencer* sequencer, testproject::MyControlSystem* controlSys, eeros::safety::SafetySystem* safetySys, std::string sequenceName);
+		~GenericSequence() {};
+		
+		virtual bool checkPreCondition();
+		virtual void init();
+// 		virtual void run(std::string);
+		virtual void run();
+		virtual void exit();
+	
+		private: 
+		// Define subsequences here
+		// Example: Homing homingSequence; 
+	
+		bool isTerminating();
+		std::string sequenceName;
+	
+		testproject::MyControlSystem* controlSys;
+		eeros::safety::SafetySystem* safetySys;
+ 
+    }; // end class
+};     // end namespace
+ 

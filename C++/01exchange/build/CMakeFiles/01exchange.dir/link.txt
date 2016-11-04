@@ -1,0 +1,1 @@
+/usr/bin/c++   -g    CMakeFiles/01exchange.dir/main.o  -o 01exchange -rdynamic 
