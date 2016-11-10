@@ -13,7 +13,11 @@ public :
 		return conditionState;
 	}
 	
-	value setPollingIntervall (int pollingIntervallSet) {	// in seconds
+	virtual int getConditionStatePolled (int intervall) {
+		
+	}
+	
+	void setPollingIntervall (int pollingIntervallSet) {	// in seconds
 		pollingIntervall = pollingIntervallSet;
 	}
 	
